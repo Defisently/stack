@@ -31,7 +31,7 @@ ERROR_CODES push(struct stack *self, int num){
         self->stack = calloc(self->capacity, sizeof(int));
     }
     if (self->size == self->capacity){
-        new_capacity = self->capacity = 2 * (self->capacity);
+        new_capacity = self->capacity + 2 * (self->capacity);
         err = new_size(self, new_capacity);
     }
 
